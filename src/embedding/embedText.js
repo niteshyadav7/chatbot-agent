@@ -1,7 +1,7 @@
 import { geminiClient } from "../config/gemini.js";
 
 export async function embedText(text) {
-  const response = await ai.models.embedContent({
+  const response = await geminiClient.models.embedContent({
     model: "gemini-embedding-001",
     contents: text,
     taskType: "RETRIEVAL_DOCUMENT", // best for RAG
